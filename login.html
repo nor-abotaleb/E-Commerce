@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/logos/logo-icon.png" />
+    <title>Get Brands | Log In</title>
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+
+    <!-- Contact-Form Page -->
+    <div class="container">
+        
+		<div class="img">
+			<img src="assets/backgrounds/shop.svg" alt="" />
+		</div>
+		<div class="login-content">
+			<form name="loginform" action="product-search.html">
+                <div class="addidas">
+                    <div class="circle-contact"></div>
+                    <img src="assets/shoes/adidas.png" alt="">
+                </div>
+				
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Username</h5>
+                        <input type="text" name="user_name" class="input" id="username">
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i"> 
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Password</h5>
+                        <input type="password" name="pass_word" class="input" id="password">
+                    </div>
+                </div>
+                <a href="reset-password.html">Forgot Password?</a>
+                <a href="#"><input class="btn" type="button" onclick="login()" value="Log In"></a>
+                <a href="registration.html" style="text-align: center; color: #ff310c;">Create New Account</a>
+                    <!--   Lines   -->
+                <div class="lines">
+                    <span class="line line-1"></span>
+                    <span>Or</span>
+                    <span class="line line-2"></span>
+                </div>
+
+                <!-- Login Icons -->
+            </form>
+        </div>
+    </div>
+    <div class="sign-in-icons">
+        <a href="google.com"><img src="assets/login-icons/google.png" alt="Google"></a>
+        <a href="facebook.com"><img src="assets/login-icons/facebook.png" alt="Facebook"></a>
+        <a href="office.com"><img src="assets/login-icons/office.png" alt="Office"></a>
+    </div>
+
+    <!-- Cookies Section -->
+
+    <div class="cookies-content">
+        <div class="cookies-img">
+            <img src="assets/login-icons/cookies.png" alt="Cookies" />
+        </div>
+        <div class="cookies-title">
+            <h4>Your Privacy</h4>
+            <p class="cookies-paragraph">By clicking "Accept all cookies", you agree getbrands can store cookies on your device.</p>
+            <div class="cookies-btns">
+                <button class="accept-cookies-btn">Accept all cookies</button>
+                <button class="customize-btn">Customize settings</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookies Settings Section -->
+
+    <div class="cookies-settings-content">
+        <a href="#" class="cookies-settings-btn"><< Back</a>
+        <div class="cookies-settings-heading">
+            <h3>Cookie Consent Settings</h3>
+            <p>Click on the different category headings to find out more and manage your preferences.</p>
+        </div>
+        <div class="cookies-settings-options">
+            <div>
+                <input type="checkbox" checked />
+                <h4>Strictly Necessary</h4>
+            </div>
+            <p class="cookies-settings-details">These cookies are necessary for our website to function properly and cannot be switched off. <span class="read-more-btn">Read more</span></p>
+            <div>
+                <input type="checkbox"/>
+                <h4>Performance Cookies</h4>
+            </div>
+            <p class="cookies-settings-details">These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. <span class="read-more-btn">Read more</span></p>
+            <div>
+                <input type="checkbox"/>
+                <h4>Targeting Cookies</h4>
+            </div>
+            <p class="cookies-settings-details">These cookies may be set through our site by our advertising partners. <span class="read-more-btn">Read more</span></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; All Rights Reserved</p>
+    </footer>
+    <!-- ./Contact-Form Page -->
+
+    <script>
+        
+        const cookiesContent = document.querySelector(".cookies-content");
+        const acceptCookies = document.querySelector(".accept-cookies-btn");
+        const customizeCookiesBtn = document.querySelector(".customize-btn");
+        const cookiesSettings = document.querySelector(".cookies-settings-content");
+        const cookiesSettingsBtn = document.querySelector(".cookies-settings-btn");
+        const inputs = document.querySelectorAll(".input");
+
+        
+        // Login Function
+
+        acceptCookies.addEventListener("click", () => {
+            cookiesContent.style.display = "none";
+        });
+
+        customizeCookiesBtn.addEventListener("click", () => {
+            cookiesContent.style.display = "none";
+            cookiesSettings.style.display = "block";
+        });
+
+        cookiesSettingsBtn.addEventListener("click", () => {
+            cookiesContent.style.display = "block";
+            cookiesSettings.style.display = "none";
+        })
+
+
+
+        function addcl(){
+            let parent = this.parentNode.parentNode;
+            parent.classList.add("focus");
+        }
+
+        function remcl(){
+            let parent = this.parentNode.parentNode;
+            if(this.value == ""){
+                parent.classList.remove("focus");
+            }
+        }
+
+
+        inputs.forEach(input => {
+            input.addEventListener("focus", addcl);
+            input.addEventListener("blur", remcl);
+        });
+
+        function login() {
+            var user = document.loginform.user_name.value;
+            var pass = document.loginform.pass_word.value;
+
+            if(user == "" || pass == "") {
+                alert("Please Enter Username and Password");
+            } else {
+                if (user == "admin@gmail.com" && pass == "1@$N7") {
+                    document.loginform.submit();
+                } else {
+                    alert("Incorrect username or password");
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>

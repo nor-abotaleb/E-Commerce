@@ -1,0 +1,215 @@
+
+
+/* ------------- Global Styles --------------*/
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .6rem;
+} 
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+} 
+
+html::-webkit-scrollbar-thumb {
+    background: rgba(47, 46, 65, 0.9);
+    border-radius: 1rem;
+} 
+
+.account-container {
+    width: 95%;
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+img {
+    cursor: pointer;
+}
+
+.flex-div {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    padding: 10px 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-right img {
+    width: 25px;
+    margin-right: 25px;
+}
+
+.nav-right .user-icon {
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 0;
+}
+
+.nav-left .menu-icon {
+    width: 22px;
+    margin-right: 25px;
+}
+
+.nav-left .logo {
+    width: 130px;
+}
+
+.nav-middle .mic-icon {
+    width: 16px;
+}
+
+.nav-middle .search-box {
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius: 25px;
+}
+
+.nav-middle .search-box input {
+    width: 400px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+.nav-middle .search-box img {
+    width: 15px;
+}
+
+
+.buy, .help {
+    position: relative;
+    color: #747474;
+    margin-right: 2rem; 
+}
+
+.buy::after {
+    content: '5';
+    position: absolute;
+    bottom: .5rem;
+    left: .5rem;
+    background-color: #ff310c;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.account-dropdown-menu {
+    position: absolute;
+    top: 4rem;
+    right: 5rem;
+    background: #fff;
+    -webkit-box-shadow: 1px 2px 12px 1px rgba(47, 46, 65, 0.5);
+    box-shadow: 0px 2px 12px 1px  rgba(47, 46, 65, 0.5);
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    display: none;
+    font-size: 15px;
+}
+
+.toggle-account-menu {
+    display: block;
+}
+
+.account-dropdown-menu li {
+    margin: 1rem 0;
+}
+
+.account-dropdown-menu li i {
+    color: rgb(156, 156, 156);
+    margin-right: 0.5rem;
+}
+
+.account {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+.account-info {
+    margin-left: 5rem;
+}
+
+.account-info p {
+    margin-top: 27px;
+    font-weight: 500;
+}
+
+.account-info .name {
+    font-size: 29px;
+    font-weight: 600;
+}
+.account-info .location {
+    margin-left: 1rem;
+    color: #777;
+}
+
+.account-info .job {
+    margin-top: .1rem;
+    color: #777;
+}
+
+.account-info i {
+    color: #ff310c;
+}
+
+.phone, .address, .site {
+    font-weight: 500;
+}
+
+.colored {
+    color: #777;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.info {
+    font-weight: 500;
+    color: #777;
+}
+
+.shopping-items {
+    border-left: 1px solid #777;
+    padding: 0 1rem;
+    margin-left: 2rem;
+}
+
+.shortcut-links a {
+    display: block;
+    margin-top: 15px;
+}
+
+.shortcut-links i {
+    color: #ff310c;
+}

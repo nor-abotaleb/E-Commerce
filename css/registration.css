@@ -1,0 +1,215 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Poppins', sans-serif;
+    perspective: 2000px;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+    height: 1100px;
+}
+
+html::-webkit-scrollbar {
+    width: .6rem;
+} 
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+} 
+
+html::-webkit-scrollbar-thumb {
+    background: rgba(47, 46, 65, 0.9);
+    border-radius: 1rem;
+} 
+
+.transition-fade {
+    opacity: 1;
+    transition: 500ms;
+}
+
+.register-overall-container {
+    background: url(../assets/backgrounds/register.svg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position-y: 6rem;
+
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+
+.register-container {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.sign-up {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.sign-up a {
+    border: 1px solid #999;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    margin-top: .8rem;
+    padding: .3rem 0;
+    color: #888;
+    font-size: 14px;
+}
+
+.sign-up span {
+    position: relative;
+    bottom: .5rem;
+}
+
+.sign-up img {
+    width: 30px;
+}
+
+.register {
+    width: 30rem;
+    height: 930px;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 10px rgba(47, 46, 65, 0.5);
+    box-shadow: 0px 0px 10px rgba(47, 46, 65, 0.5);
+    border-radius: 5px;
+}
+
+.register .individual {
+    font-size: 18px;
+    font-weight: normal;
+    color: #999;
+
+}
+
+.lines {
+    color: #999;
+    margin-top: 2rem;
+}
+.lines .line {
+    width: 130px;
+    height: 1px;
+    background-color: #c4c4c4;
+    display: inline-block;
+    margin: 0 .5rem;
+}
+
+form {
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.input-div {
+    margin: 1.4rem 0;
+    margin-bottom: 0;
+}
+
+.input-div .input {
+    display: block;
+	width: 63%;
+	height: 48px;
+	border-radius: 5px;
+	font-size: 1.1rem;
+	font-family: 'Poppins', sans-serif;
+	margin: .6rem auto;
+	border: none;
+    outline: none;
+    border: 1px solid #999;
+}
+
+.input-div h5 {
+    color: #777;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: -9rem;
+}
+
+.input-div .first, .input-div .last {
+    margin-left: -13rem;
+}
+
+.input-div .eye {
+    color: #466ef3;
+    position: relative;
+    bottom: 2.7rem;
+    left: 7.5rem;
+    cursor: pointer;
+}
+
+.input-div .eye-visible {
+    display: none;
+}
+
+.register-btn {
+	display: block;
+	width: 63%;
+	height: 48px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	background: #ff310c;
+	font-size: 1.1rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	margin: .5rem auto;
+	cursor: pointer;
+	transition: .5s;
+    text-align: center;
+}
+
+.login {
+    color: #466ef3;
+    font-size: 15px;
+}
+
+.account {
+    font-size: 15px;
+    color: #555;
+    margin-left: -3rem;
+}
+
+/* Recaptcha Styles */
+.recaptcha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f6f6f8;
+    -webkit-box-shadow: 0px 0px 10px rgba(47, 46, 65, 0.5);
+    box-shadow: 0px 0px 10px rgba(47, 46, 65, 0.5);
+    padding: .5rem 2rem;
+    width: 380px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out;
+}
+
+.recaptcha-image p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.recaptcha-image img {
+    margin-left: 2rem;
+}

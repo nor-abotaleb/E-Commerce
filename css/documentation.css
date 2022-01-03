@@ -1,0 +1,114 @@
+/* ------------- Global Styles --------------*/
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .6rem;
+} 
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+} 
+
+html::-webkit-scrollbar-thumb {
+    background: rgba(47, 46, 65, 0.9);
+    border-radius: 1rem;
+} 
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.colored {
+    color: #E4887A;
+    font-weight: 600;
+}
+/* Global Styles End */
+div.main-body {
+	display: grid;
+	grid-template-columns: minmax(300px , auto)1fr;
+	grid-template-areas: "navbar mainContent";
+	grid-gap: 20px;
+}
+
+nav#navbar {
+	grid-area: navbar;
+	position: fixed;
+    background: #E4887A;
+    height: 100%;
+}
+
+.navbar {
+    padding-top: 100px;
+}
+
+nav#navbar a {
+	display: block;
+	border-bottom: 1px solid #fff;
+	padding: 20px;
+	margin: 10px 0;
+	text-decoration: none;
+	color: #000;
+    transition: transform 0.5s ease-out;
+}
+
+nav#navbar a:hover {
+    transform: scale(1.1);
+}
+
+main#main-doc {
+	grid-area: mainContent;
+    width: 90%;
+    padding: 20px;
+}
+
+header {
+	font-size: 1.5rem;
+	font-weight: 600;
+    color: #000;
+    padding: 10px;
+    margin: 50px 0;
+	background: #E4887A;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.header-one {
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+
+code {
+	background-color: #CCC;
+	display: block;
+	padding: 20px;
+}
+

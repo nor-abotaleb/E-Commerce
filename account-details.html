@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/logos/logo-icon.png" />
+    <title>Get Brands | Account</title>
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/account-details.css" />
+</head>
+<body>
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <a href="home.html"><img src="./assets/logos/logo03.png" class="logo" alt="GetBrands"></a>
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <img src="assets/account-icons/search.png" alt="">
+            </div>
+        </div>
+        <div class="nav-right flex-div">
+                <a href="shopping.html"><i class="fa fa-cart-plus buy"></i></a>
+            <img src="assets/account-icons/more.png" alt="">
+            <img src="assets/account-icons/notification.png" alt="">
+            <i class="fa fa-question help"></i>
+            <img src="assets/account-icons/Jack.png" class="user-icon" alt="User" />
+            <ul class="account-dropdown-menu">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user"></i> Jack Jeremy
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-dollar-sign"></i> Balance
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="far fa-edit"></i> Edit
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-sign-out-alt"></i> Log out
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="acount-body" style="margin-left: 10rem;">
+        <div class="account-container">
+            <div class="account">
+                <div class="profile-img">
+                    <img src="assets/account-icons/Jack.png" style="border-radius: 50%; margin-bottom: 1rem ;" alt="User"/>
+                    <h4>Jack Jeremy</h4>
+                    <p class="phone">
+                        <i class="fa fa-map-marker-alt"></i> <span>New York</span>
+                    </p>
+                    <p class="site">
+                        <span class="colored">www.jackjeremy.com</span>
+                    </p>
+            <div class="sidebar" style="font-weight: 500;">
+                <div class="shortcut-links">
+                    <a href="home.html">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-fire"></i>
+                        <span>Explore</span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-comments"></i>
+                        <span>Messages</span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-eye"></i>
+                        <span>History</span>
+                    </a>
+            </div>
+            </div>
+
+                </div>
+                <div class="account-info">
+                    <p>
+                        <span class="name">Jack Jeremy</span>
+                        <span class="location"><i class="fa fa-map-marker-alt"></i> New York, NY</span>
+                    </p>
+                    <p class="job">Customer</p>
+                    <hr>
+                    <p class="phone">
+                        <span>Phone:</span>
+                        <span class="colored">+1 123 456 7043</span>
+                    </p>
+                    <p class="address">
+                        <span>Address:</span>
+                        <span class="info">525 E 6th Street <br> New Yourk, NY 10651-78 156-187-60</span>
+                    </p>
+                    <p class="phone">
+                        <span>Email:</span>
+                        <span class="colored">hello@jack.com</span>
+                    </p>
+                    <p class="site">
+                        <span>Site:</span>
+                        <span class="colored">www.jackjeremy.com</span>
+                    </p>
+                    <p class="phone">
+                        <span>Gender:</span>
+                        <span class="info">Male</span>
+                    </p>
+                </div>
+                <div class="shopping-items" style="width: 30%;margin-top: 4rem; margin-left: 7rem;">
+                            <div class="shopping-cart-product">
+                                <h4>Purchased Items</h4>
+                                <div class="item-img">
+                                    <img src="./assets/clothes/2.png" width="100" alt="">
+                                    <img src="./assets/bags/5.png" width="100" alt="">
+                                    <img src="./assets/watch/1.png" width="100" alt="">
+                                    <img src="./assets/shoes/1.png" width="100" alt="">
+                                    <img src="./assets/watch/watch-4.png" width="100" alt="">
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const userImage = document.querySelector(".user-icon");
+        const accountDropdownMenu = document.querySelector(".account-dropdown-menu");
+
+        userImage.addEventListener("click", () => {
+            accountDropdownMenu.classList.toggle("toggle-account-menu");
+        })
+    </script>
+</body>
+</html>
