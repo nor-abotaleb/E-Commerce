@@ -351,10 +351,10 @@
         const searchBox = document.getElementById("search").value.toUpperCase();
         const storeItems = document.getElementById("product-list");
         const product = document.querySelectorAll(".product");
-        const productName = storeItems.querySelector("h4");
+        const productName = storeItems.getElemenentsByTagName("h4");
 
         for (var i = 0; i < productName.length; i++) {
-            let match = product[i].querySelector("h4")[0];
+            let match = product[i].getElemenentsByTagName("h4")[0];
 
             if (match) {
                 let textValue = match.textContent || match.innerHTML;
