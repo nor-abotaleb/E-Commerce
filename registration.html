@@ -134,7 +134,7 @@
 
             if (firstName == "" && lastName == "" && email == "" && password == "") {
                 
-                alert ("Please enter your info for registration");
+                alert ("Please provide your personal info for registration");
 
             } else if (!letters.test(firstName) && !letters.test(lastName)) {
 
@@ -157,7 +157,7 @@
                 alert('Using uppercase , lowercase, special character and numeric letter are required');
             } 
             else {
-                
+
                 document.registration_form.submit();
 
             }
