@@ -111,7 +111,7 @@
                         <select name="" id="">
                             <option value="">1</option>
                             <option value="">2</option>
-                            <option value="" selected>3</option>
+                            <option value="">3</option>
                             <option value="">4</option>
                             <option value="">5</option>
                             <option value="">6</option>
@@ -127,7 +127,7 @@
                 <div class="product-pq">
                     <p class="price">Price: $50</p> 
                     <p class="price">Quantity: 
-                        <select name="" id="">
+                        <select>
                             <option value="">1</option>
                             <option value="">2</option>
                             <option value="">3</option>
@@ -148,7 +148,7 @@
                     <p class="price">Quantity: 
                         <select name="" id="">
                             <option value="">1</option>
-                            <option value="" selected>2</option>
+                            <option value="">2</option>
                             <option value="">3</option>
                             <option value="">4</option>
                             <option value="">5</option>
@@ -195,45 +195,48 @@
     <div class="purchase-popup">
         <div class="purchased-product">
             <div class="purchased-product_product-details">
-                <div class="section-top">
+                <div class="section-top"  id="product-details-1">
                     <div class="purchased-product-img">
                         <img src="assets/bags/1.png" alt="Product"  class="purchased-product-image" width="120" />
                     </div>
                     <div class="purchased-product-details">
                         <p class="purchased-product-name">City Backpack</p>
-                        <p class="purchased-product-price">$105.00</p>
+                        <div id="price1"></div>
+                        <i class="fa fa-trash-alt" class="remove-purchased-product" id="remove-product1"></i>
                         <a href="#" class="purchased-product-quantity">
-                            <i class="fa fa-trash-alt"></i>
-                            <span class="product-number">3</span>
-                            <i class="fa fa-plus"></i>
+                            <input type="button" value="-" class="decrement" onclick="decrement1()" />
+                            <input type="text" name="quantity" value="1" min="0" size="1" max="100" class="number" id="number1" />
+                            <input type="button" value="+" class="increment" onclick="increment1()" />
                         </a>
                     </div>
                 </div>
-                <div class="section-top">
+                <div class="section-top"  id="product-details-2">
                     <div class="purchased-product-img">
                         <img src="assets/shoes/shoes1.1.png" alt="Product"  class="purchased-product-image" width="120" />
                     </div>
                     <div class="purchased-product-details">
                         <p class="purchased-product-name">Puma Men's Sneakers</p>
-                        <p class="purchased-product-price">$50.00</p>
+                        <div id="price2"></div>
+                        <i class="fa fa-trash-alt" class="remove-product" id="remove-product2"></i>
                         <a href="#" class="purchased-product-quantity">
-                            <i class="fa fa-trash-alt"></i>
-                            <span class="product-number">1</span>
-                            <i class="fa fa-plus"></i>
+                            <input type="button" value="-" class="decrement" onclick="decrement2()" />
+                            <input type="text" name="quantity" value="1" min="0" size="1" max="100" class="number" id="number2" />
+                            <input type="button" value="+" class="increment" onclick="increment2()"/>
                         </a>
                     </div>
                 </div>
-                <div class="section-top">
+                <div class="section-top" id="product-details-3">
                     <div class="purchased-product-img">
                         <img src="assets/clothes/3.png" alt="Product"  class="purchased-product-image" width="120" />
                     </div>
                     <div class="purchased-product-details">
                         <p class="purchased-product-name">Jacket amet consectetur</p>
-                        <p class="purchased-product-price">$240.00</p>
+                        <div id="price3"></div>
+                        <i class="fa fa-trash-alt" class="remove-product" id="remove-product"></i>
                         <a href="#" class="purchased-product-quantity">
-                            <i class="fa fa-trash-alt"></i>
-                            <span class="product-number">2</span>
-                            <i class="fa fa-plus"></i>
+                            <input type="button" value="-" onclick="decrement()" class="decrement" />
+                            <input type="text" value="1" min="0" size="1" max="100" class="number" id="number" />
+                            <input type="button" value="+" onclick="increment()" class="increment" />
                         </a>
                     </div>
                 </div>
@@ -244,7 +247,7 @@
                     5% OFF(-$1.50)
                 </span>
                 <div class="subtotal-price">
-                    <p class="subtotal">Subtotal: $386.00</p>
+                    <p class="subtotal">Subtotal: $205</p>
                 </div>
                 <div class="checked">
                     <input type="checkbox"/>
@@ -279,21 +282,136 @@
         const purchaseProductBtn = document.querySelector(".purchase-product-btn");
         const successMessage = document.querySelector(".success");
         const successIcon = document.querySelector(".success-icon");
-
+        
         purchaseBtn.addEventListener("click", () => {
             purchasePopup.classList.toggle("show-popup");
         });
-
+        
         purchaseProductBtn.addEventListener("click", () => {
             successMessage.style.opacity = 1;
             successMessage.style.visibility = "visible";
             purchasePopup.style.display = "none";
         });
-
         successIcon.addEventListener("click", () => {
             successMessage.style.opacity = 0;
             successMessage.style.visibility = "hidden";
         });
+        
+        function increment()
+            {
+                var value = parseInt(document.getElementById('number').value, 10);
+                value = isNaN(value) ? 0 : value;
+                if(value<100){
+                    value++;
+                        document.getElementById('number').value = value;
+                    }
+                document.getElementById("number").value = value;
+                price = '$' + `<span>${p * value}</span>`;
+                document.getElementById("price3").innerHTML = price;
+                
+            }
+        function decrement()
+            {
+                var value = parseInt(document.getElementById('number').value, 10);
+                value = isNaN(value) ? 0 : value;
+                if(value>0){
+                    value--;
+                        document.getElementById('number').value = value;
+                    }
+                document.getElementById("number").value = value;
+                price = '$' + `<span>${p * value}</span>`;
+                document.getElementById("price3").innerHTML = price;
+
+            }
+
+            var p='120';
+            var price = '$'+`<span>${p}</span>`;
+            document.getElementById('price3').innerHTML = price;
+
+        function increment2()
+            {
+                var value = parseInt(document.getElementById('number2').value, 10);
+                value = isNaN(value) ? 0 : value;
+                if(value<100){
+                    value++;
+                        document.getElementById('number2').value = value;
+                }
+                document.getElementById("number2").value = value;
+                price2 = '$' + `<span>${p2 * value}</span>`;
+                document.getElementById("price2").innerHTML = price2;
+            }
+        function decrement2()
+            {
+                var value = parseInt(document.getElementById('number2').value, 10);
+                value = isNaN(value) ? 0 : value;
+                if(value>0){
+                    value--;
+                        document.getElementById('number2').value = value;
+                }
+                document.getElementById("number2").value = value;
+                price2 = '$' + `<span>${p2 * value}</span>`;
+                document.getElementById("price2").innerHTML = price2;
+
+            }
+
+            var p2='50';
+            var price2 = '$'+`<span>${p2}</span>`;
+            document.getElementById('price2').innerHTML = price2;
+        function increment1()
+            {
+                var value = parseInt(document.getElementById('number1').value, 10);
+                value = isNaN(value) ? 0 : value;
+                if(value<100){
+                    value++;
+                        document.getElementById('number1').value = value;
+                }
+                document.getElementById("number").value = value;
+                price1 = '$' + `<span>${p1 * value}</span>`;
+                document.getElementById("price1").innerHTML = price1;
+            }
+        function decrement1()
+            {
+                var value = parseInt(document.getElementById('number1').value, 10);
+                value = isNaN(value) ? 0 : value;
+                if(value>0){
+                    value--;
+                        document.getElementById('number1').value = value;
+                }
+                document.getElementById("number1").value = value;
+                price1 = '$' + `<span>${p1 * value}</span>`;
+                document.getElementById("price1").innerHTML = price1;
+
+            }
+
+            var p1='35';
+            var price1 = '$'+`<span>${p1}</span>`;
+            document.getElementById('price1').innerHTML = price1;
+        
+    const purchaseProductDetails = document.querySelector("#product-details-3");
+    const removePurchaseProduct = document.querySelector("#remove-product");
+
+    removePurchaseProduct.addEventListener("click", () => {
+
+        purchaseProductDetails.style.display = "none";
+
+    });
+    const purchaseProductDetails2 = document.querySelector("#product-details-2");
+    const removePurchaseProduct2 = document.querySelector("#remove-product2");
+
+    removePurchaseProduct2.addEventListener("click", () => {
+
+        purchaseProductDetails2.style.display = "none";
+
+    });
+    const purchaseProductDetails1 = document.querySelector("#product-details-1");
+    const removePurchaseProduct1 = document.querySelector("#remove-product1");
+
+    removePurchaseProduct1.addEventListener("click", () => {
+
+        purchaseProductDetails1.style.display = "none";
+
+    });
+
 
     </script>
 </body>

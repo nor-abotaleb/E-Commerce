@@ -215,7 +215,7 @@ ul {
 }
 
 .nav .menu-icons .buy::after {
-    content: '6';
+    content: '3';
     position: absolute;
     bottom: .5rem;
     left: .5rem;
@@ -383,7 +383,7 @@ ul {
     margin-left: 1rem;
 }
 
-.purchase-popup .section-top .purchased-product-details .purchased-product-price {
+.purchase-popup .section-top .purchased-product-details #price1, .purchase-popup .section-top .purchased-product-details #price2, .purchase-popup .section-top .purchased-product-details #price3 {
     color: #777;
     margin: .6rem 0; 
 }
@@ -394,10 +394,17 @@ ul {
     padding: .4rem 1.2rem;
 }
 
-.purchase-popup .section-top .purchased-product-details .purchased-product-quantity .product-number {
-    color: #2F2E41;
-    font-size: 16px;
-    margin: 0 0.5rem;
+.purchase-popup .section-top .purchased-product-details .purchased-product-quantity .number {
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.purchase-popup .section-top .purchased-product-details .purchased-product-quantity input[type="button"] {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .purchase-popup .section-top .purchased-product-details .purchased-product-quantity i {
@@ -445,6 +452,13 @@ ul {
     background: #E7ACB2;
     color: #f6f6f8;
     letter-spacing: .4px;
+}
+
+.fa-trash-alt {
+    cursor: pointer;
+    margin-right: 1rem;
+    color: #E7ACB2;
+    font-size: 1.1rem;
 }
 /* ./Purchase Popup */
 

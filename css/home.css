@@ -213,7 +213,7 @@ ul {
 }
 
 .nav .menu-icons .buy::after {
-    content: '0';
+    content: '3';
     position: absolute;
     bottom: .5rem;
     left: .5rem;
