@@ -34,7 +34,7 @@ toTop.addEventListener("click", () => {
 
 // Count Down
 const countDown = () => {
-    const countDate = new Date("Febraury 17, 2022 00:00:00").getTime();
+    const countDate = new Date("January 30, 2022 00:00:00").getTime();
     const now = new Date().getTime();
     const gap = countDate - now;
 

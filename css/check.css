@@ -238,7 +238,7 @@ ul {
 }
 
 .checkout_wrapper .product_info {
-    background: hsl(354, 55%, 79%);
+    background: rgba(227, 136, 123, 0.7);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     position: relative;
@@ -317,7 +317,7 @@ ul {
 }
 
 .checkout_form .details .section input[type="text"]:focus {
-    border: 2px solid #e7acb2;
+    border: 2px solid rgba(227, 136, 123, 0.7);
 }
 
 .checkout_form .details .section.last_section {
@@ -331,7 +331,7 @@ ul {
 }
 
 .checkout_form .details .btn {
-    background: #E7ACB2;
+    background: rgba(227, 136, 123, 0.7);
     padding: 10px;
     width: 90%;
     border-radius: 5px;
@@ -412,7 +412,7 @@ ul {
 }
 
 .purchased-product-discount .discount-icon {
-    color: #E7ACB2;
+    color: rgba(227, 136, 123, 0.7);
 }
 
 .purchased-product-discount .discount-icon i {
@@ -449,7 +449,7 @@ ul {
 }
 
 .purchase-popup .purchased-product-discount .buy-product .purchase-product-btn {
-    background: #E7ACB2;
+    background: rgba(227, 136, 123, 0.7);
     color: #f6f6f8;
     letter-spacing: .4px;
 }
@@ -457,7 +457,7 @@ ul {
 .fa-trash-alt {
     cursor: pointer;
     margin-right: 1rem;
-    color: #E7ACB2;
+    color: rgba(227, 136, 123, 0.7);
     font-size: 1.1rem;
 }
 /* ./Purchase Popup */

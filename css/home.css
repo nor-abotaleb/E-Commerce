@@ -157,6 +157,7 @@ ul {
 .nav .nav-list {
     display: flex;
     align-items: center;
+    margin-right: 3rem;
 }
 
 .nav .nav-link:not(:last-child) {
@@ -340,7 +341,7 @@ ul {
     width: 80px;
     height: 3px;
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
